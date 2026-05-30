@@ -1,70 +1,79 @@
-# Getting Started with Create React App
+App Cadastro de Usuários
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Interface de cadastro de usuários construída com React. É possível adicionar, listar e remover usuários através de uma API REST conectada.
 
-## Available Scripts
+Funcionalidades
 
-In the project directory, you can run:
+- Cadastrar usuários com nome e idade
+- Listar todos os usuários cadastrados
+- Deletar usuários da lista
+- Navegação entre páginas com React Router
+- Estilização com Styled Components
 
-### `npm start`
+Tecnologias
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- React
+- Styled Components
+- Axios
+- React Router DOM
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Como rodar
 
-### `npm test`
+Clone o repositório e instale as dependências:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+npm install
+```
 
-### `npm run build`
+Certifique-se de que a API está rodando em `http://localhost:3002` antes de iniciar a aplicação.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+npm start
+```
+Estrutura do projeto
+src/
+├── assets/
+├── components/
+│   ├── Button/
+│   ├── ContainerItens/
+│   └── Title/
+├── containers/
+│   ├── Home/
+│   └── Users/
+├── routes.jsx
+├── globalStyles.js
+└── index.js
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+ Commits (em ordem natural de desenvolvimento)
+ 
+commit inicial - configuração do projeto com create react app
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+adiciona estilos globais com reset via styled-components
 
-### `npm run eject`
+configura rotas com react-router-dom
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+cria componente reutilizável de botão
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+cria componente de título
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+cria componente de layout ContainerItens
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+cria página Home com formulário de cadastro
 
-## Learn More
+conecta formulário da Home ao endpoint POST /user
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+redireciona para lista de usuários após cadastro
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+cria página de usuários com renderização da lista
 
-### Code Splitting
+conecta página de usuários ao endpoint GET /users
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+adiciona funcionalidade de deletar usuário com atualização otimista
 
-### Analyzing the Bundle Size
+adiciona botão de voltar na página de usuários
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+estiliza página Home com imagem de fundo e inputs
 
-### Making a Progressive Web App
+estiliza página de usuários e itens da lista
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+adiciona avatar e ícones como assets estáticos
