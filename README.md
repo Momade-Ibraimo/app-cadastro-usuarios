@@ -1,8 +1,23 @@
-App Cadastro de Usuários
+# 👤 App Cadastro de Usuários
 
-Interface de cadastro de usuários construída com React. É possível adicionar, listar e remover usuários através de uma API REST conectada.
+Interface de cadastro de usuários construída com React. Permite adicionar, listar e remover usuários através de uma API REST conectada.
 
-Funcionalidades
+> ⚠️ **Este projeto faz parte de um sistema com dois repositórios que se comunicam. Para funcionar corretamente, a API e o Frontend precisam estar rodando na mesma máquina ao mesmo tempo.**
+>
+> | Repositório | Link |
+> |---|---|
+> | 🔧 **API (necessária para o frontend funcionar)** | [node-user-api](https://github.com/Momade-Ibraimo/node-user-api) |
+> | 🖥️ **Frontend (você está aqui)** | [app-cadastro-usuarios](https://github.com/Momade-Ibraimo/app-cadastro-usuarios) |
+
+## 🌐 Deploy
+
+Acesse a versão publicada: [app-cadastro-usuarios](https://momade-ibraimo.github.io/app-cadastro-usuarios/)
+
+> ⚠️ A versão publicada exibe a interface, mas **as funcionalidades dependem da API rodando localmente**. Para uso completo, siga as instruções abaixo.
+
+---
+
+## ✅ Funcionalidades
 
 - Cadastrar usuários com nome e idade
 - Listar todos os usuários cadastrados
@@ -10,27 +25,48 @@ Funcionalidades
 - Navegação entre páginas com React Router
 - Estilização com Styled Components
 
-Tecnologias
+---
+
+## 🛠️ Tecnologias utilizadas
 
 - React
 - Styled Components
 - Axios
 - React Router DOM
 
-Como rodar
+---
 
-Clone o repositório e instale as dependências:
+## ⚙️ Como rodar
+
+### 1. Suba a API primeiro
+
+O frontend **depende da API** para funcionar. Clone e inicie o back-end antes de qualquer coisa:
 
 ```bash
+git clone https://github.com/Momade-Ibraimo/node-user-api
+cd node-user-api
 npm install
-```
-
-Certifique-se de que a API está rodando em `http://localhost:3002` antes de iniciar a aplicação.
-
-```bash
 npm start
 ```
-Estrutura do projeto
+
+A API deve estar rodando em `http://localhost:3002`.
+
+### 2. Suba o frontend
+
+```bash
+git clone https://github.com/Momade-Ibraimo/app-cadastro-usuarios
+cd app-cadastro-usuarios
+npm install
+npm start
+```
+
+Com os dois rodando na mesma máquina, a aplicação estará completamente funcional.
+
+---
+
+## 📁 Estrutura do projeto
+
+```
 src/
 ├── assets/
 ├── components/
@@ -43,37 +79,14 @@ src/
 ├── routes.jsx
 ├── globalStyles.js
 └── index.js
+```
 
- Commits (em ordem natural de desenvolvimento)
- 
-commit inicial - configuração do projeto com create react app
+---
 
-adiciona estilos globais com reset via styled-components
+## 🔗 Endpoints utilizados
 
-configura rotas com react-router-dom
-
-cria componente reutilizável de botão
-
-cria componente de título
-
-cria componente de layout ContainerItens
-
-cria página Home com formulário de cadastro
-
-conecta formulário da Home ao endpoint POST /user
-
-redireciona para lista de usuários após cadastro
-
-cria página de usuários com renderização da lista
-
-conecta página de usuários ao endpoint GET /users
-
-adiciona funcionalidade de deletar usuário com atualização otimista
-
-adiciona botão de voltar na página de usuários
-
-estiliza página Home com imagem de fundo e inputs
-
-estiliza página de usuários e itens da lista
-
-adiciona avatar e ícones como assets estáticos
+| Método | Endpoint | Descrição |
+|---|---|---|
+| `POST` | `/user` | Cria um novo usuário |
+| `GET` | `/users` | Lista todos os usuários |
+| `DELETE` | `/users/:id` | Remove um usuário |
