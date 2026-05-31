@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.js": "/nome-do-repositorio/static/js/main.9e19bf81.js",
+    "static/media/bglogin.svg": "/nome-do-repositorio/static/media/bglogin.0c21ea5b1c94fd6eec0b9e9d52603d04.svg",
+    "static/media/bgUsers.svg": "/nome-do-repositorio/static/media/bgUsers.333d91caddf827d85db046b7155671a3.svg",
+    "static/media/lixoic.png": "/nome-do-repositorio/static/media/lixoic.d24b3a7dbdb4f7457201.png",
+    "static/media/peopletop.svg": "/nome-do-repositorio/static/media/peopletop.34cf8336a44b1d7ee838e261b5325f42.svg",
+    "static/media/avatarola.svg": "/nome-do-repositorio/static/media/avatarola.c204cfdbc529be5956d3e6e88b70326a.svg",
+    "index.html": "/nome-do-repositorio/index.html",
+    "main.9e19bf81.js.map": "/nome-do-repositorio/static/js/main.9e19bf81.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.9e19bf81.js"
+  ]
+}
